@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#42266f" />
+    <meta
+      name="description"
+      content="Quick access to Jeddah World Academy classroom Google Meet rooms."
+    />
+    <title>Classroom Meet Hub | Jeddah World Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Jeddah World Academy Meet Hub home">
+        <img class="brand-logo" src="assets/logo.png" alt="Jeddah World Academy" />
+        <span class="brand-name">Jeddah World Academy<span>CLASSROOM MEET HUB</span></span>
+      </a>
+      <a class="header-link" href="#classrooms">Find a classroom <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> YOUR SCHOOL, ONE CLICK AWAY</p>
+          <h1 id="hero-title">Every classroom.<br /><span>One easy link.</span></h1>
+          <p class="hero-description">
+            Find your class and join its Google Meet in seconds. Choose a grade below to get started.
+          </p>
+          <a class="hero-cta" href="#classrooms">
+            Browse classrooms
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 3.5v13m0 0 5-5m-5 5-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <p class="public-note">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 2.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Z" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 9v4m0-6h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            Anyone with this page can access the classroom links.
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit art-orbit-one"></div>
+          <div class="art-orbit art-orbit-two"></div>
+          <div class="art-spark spark-one">✦</div>
+          <div class="art-spark spark-two">✳</div>
+          <div class="art-card">
+            <div class="art-card-top">
+              <span class="art-live"><span></span> CLASS IS READY</span>
+              <span class="art-dots">•••</span>
+            </div>
+            <div class="video-window">
+              <div class="sun-shape"></div>
+              <div class="cloud cloud-one"></div>
+              <div class="cloud cloud-two"></div>
+              <div class="hill hill-back"></div>
+              <div class="hill hill-front"></div>
+              <div class="school">
+                <div class="school-roof"></div>
+                <div class="school-building">
+                  <span></span><span></span><span></span><span></span>
+                  <i></i>
+                </div>
+                <div class="school-door"></div>
+              </div>
+              <div class="school-flag"></div>
+            </div>
+            <div class="art-card-bottom">
+              <span class="teacher-avatar">✿</span>
+              <span><strong>Learning together</strong><small>Ready when you are</small></span>
+              <span class="join-indicator">↗</span>
+            </div>
+          </div>
+          <div class="float-badge"><span>✦</span> Let’s learn!</div>
+        </div>
+        <div class="hero-decoration" aria-hidden="true">✳</div>
+      </section>
+
+      <section class="classrooms-section" id="classrooms" aria-labelledby="classrooms-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">QUICK ACCESS</p>
+            <h2 id="classrooms-title">Find your classroom</h2>
+            <p class="section-description">Pick your grade and section to open the right Meet room.</p>
+          </div>
+          <div class="class-count"><strong id="total-count">53</strong><span>classrooms</span></div>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8" />
+              <path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <span class="visually-hidden">Search by grade or classroom</span>
+            <input id="classroom-search" type="search" placeholder="Search grade or section…" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <div class="filters" role="group" aria-label="Filter classrooms by school stage">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All grades</button>
+            <button class="filter-button" type="button" data-filter="kg" aria-pressed="false">KG</button>
+            <button class="filter-button" type="button" data-filter="elementary" aria-pressed="false">Grades 1–5</button>
+            <button class="filter-button" type="button" data-filter="middle" aria-pressed="false">Grades 6–8</button>
+            <button class="filter-button" type="button" data-filter="high" aria-pressed="false">Grades 9–12</button>
+          </div>
+        </div>
+
+        <p class="results-status" id="results-status" aria-live="polite"></p>
+        <div class="grade-groups" id="grade-groups"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>No classrooms found</h3>
+          <p>Try another grade or search for a different section.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#">Jeddah World Academy</a>
+      <span>Learn. Connect. Grow.</span>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
